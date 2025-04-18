@@ -74,6 +74,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'hero-pattern': "url('https://images.unsplash.com/photo-1596382941523-4cbae6e9dfbf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080')",
+        'hero-pattern-dark': "url('https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

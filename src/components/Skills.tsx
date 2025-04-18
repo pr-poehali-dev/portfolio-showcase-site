@@ -1,35 +1,36 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Lightbulb, Workflow } from "lucide-react";
+import { BookOpen, Lightbulb, Workflow } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
       id: 1,
-      title: "Технические навыки",
-      icon: <Code className="h-5 w-5 text-primary" />,
+      title: "Копирайтинг",
+      icon: <BookOpen className="h-5 w-5 text-primary" />,
       skills: [
-        "JavaScript", "TypeScript", "React", "Redux", 
-        "HTML5", "CSS3", "Tailwind CSS", "Styled Components",
-        "REST API", "GraphQL", "Webpack", "Vite"
+        "SEO-копирайтинг", "Продающие тексты", "Лендинги", 
+        "Email-рассылки", "Контент для соцсетей", "Рекламные тексты",
+        "Пресс-релизы", "Описания товаров", "Статьи"
       ]
     },
     {
       id: 2,
-      title: "Методологии",
+      title: "Маркетинг",
       icon: <Workflow className="h-5 w-5 text-primary" />,
       skills: [
-        "Agile", "Scrum", "Kanban", 
-        "CI/CD", "TDD", "Code Review"
+        "Контент-маркетинг", "SEO-оптимизация", "SMM", 
+        "Email-маркетинг", "Анализ аудитории", "Стратегическое планирование"
       ]
     },
     {
       id: 3,
-      title: "Дополнительные навыки",
+      title: "Инструменты",
       icon: <Lightbulb className="h-5 w-5 text-primary" />,
       skills: [
-        "UI/UX", "SEO", "Performance Optimization", 
-        "Cross-browser Testing", "Accessibility", "Responsive Design"
+        "Google Docs", "Wordpress", "Tilda", 
+        "SEO-инструменты", "Canva", "Ahrefs",
+        "Социальные сети", "Яндекс.Метрика", "Google Analytics"
       ]
     }
   ];

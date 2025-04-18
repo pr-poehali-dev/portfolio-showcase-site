@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { GithubIcon, Mail, Phone, MapPin } from "lucide-react";
+import { FileIcon, Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -16,8 +16,8 @@ const Contact = () => {
       id: 1,
       icon: <Mail className="h-5 w-5 text-primary" />,
       title: "Email",
-      value: "ivan@example.com",
-      link: "mailto:ivan@example.com"
+      value: "yasmina@example.com",
+      link: "mailto:yasmina@example.com"
     },
     {
       id: 2,
@@ -28,10 +28,10 @@ const Contact = () => {
     },
     {
       id: 3,
-      icon: <GithubIcon className="h-5 w-5 text-primary" />,
-      title: "GitHub",
-      value: "github.com/ivanov",
-      link: "https://github.com/ivanov"
+      icon: <FileIcon className="h-5 w-5 text-primary" />,
+      title: "Портфолио",
+      value: "portfolio.yasmina.ru",
+      link: "https://portfolio.yasmina.ru"
     }
   ];
 

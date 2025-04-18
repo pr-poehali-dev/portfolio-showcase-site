@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
         <Link to="/" className="flex items-center gap-2 font-bold text-xl">
           Портфолио
         </Link>
-        <nav className="ml-auto flex gap-4">
+        <nav className="ml-auto flex gap-4 items-center">
           <Button variant="ghost" asChild>
             <Link to="/#about">Обо мне</Link>
           </Button>
@@ -21,6 +22,7 @@ const Header = () => {
           <Button variant="ghost" asChild>
             <Link to="/#contact">Контакты</Link>
           </Button>
+          <ThemeToggle />
         </nav>
       </div>
     </header>

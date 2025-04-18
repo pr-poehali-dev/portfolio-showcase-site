@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
+import { FacebookIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground">
-              © 2023 Иван Иванов. Все права защищены.
+              © 2023 Ясмина Кулова. Все права защищены.
             </p>
           </div>
           
@@ -29,16 +29,7 @@ const Footer = () => {
           
           <div className="flex gap-4">
             <a 
-              href="https://github.com/ivanov" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <GithubIcon className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </a>
-            <a 
-              href="https://linkedin.com/in/ivanov" 
+              href="https://linkedin.com/in/yasmina" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -47,13 +38,22 @@ const Footer = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="https://twitter.com/ivanov" 
+              href="https://instagram.com/yasmina.kulova" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <TwitterIcon className="h-5 w-5" />
-              <span className="sr-only">Twitter</span>
+              <InstagramIcon className="h-5 w-5" />
+              <span className="sr-only">Instagram</span>
+            </a>
+            <a 
+              href="https://facebook.com/yasmina.kulova" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <FacebookIcon className="h-5 w-5" />
+              <span className="sr-only">Facebook</span>
             </a>
           </div>
         </div>

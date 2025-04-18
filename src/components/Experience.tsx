@@ -1,28 +1,28 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, Pen } from "lucide-react";
 
 const Experience = () => {
   const experienceData = [
     {
       id: 1,
-      title: "Старший Frontend-разработчик",
-      company: "Технологии Будущего",
+      title: "Старший копирайтер",
+      company: "Медиа Мастерс",
       period: "2020 - настоящее время",
-      description: "Разработка и поддержка крупных SPA на React и TypeScript. Внедрение современных практик разработки, оптимизация производительности."
+      description: "Создание SEO-контента для крупных брендов, разработка контент-стратегий, координация работы с командой копирайтеров, редактирование текстов."
     },
     {
       id: 2,
-      title: "Frontend-разработчик",
-      company: "Цифровые Решения",
+      title: "Копирайтер",
+      company: "Текст-Про",
       period: "2018 - 2020",
-      description: "Создание пользовательских интерфейсов для веб-приложений. Работа с React, Redux и REST API."
+      description: "Написание информационных статей, продающих текстов и e-mail рассылок для компаний из разных отраслей. Оптимизация контента для поисковых систем."
     },
     {
       id: 3,
-      title: "Младший разработчик",
-      company: "Web Solutions",
+      title: "Младший копирайтер",
+      company: "Контент Хаус",
       period: "2016 - 2018",
-      description: "Верстка интерфейсов, интеграция с бэкендом, поддержка существующих проектов."
+      description: "Подготовка текстов для социальных сетей, создание описаний товаров для интернет-магазинов, участие в разработке рекламных кампаний."
     }
   ];
 
@@ -35,7 +35,7 @@ const Experience = () => {
             <Card key={item.id} className="h-full">
               <CardHeader>
                 <CardTitle className="flex items-start gap-2">
-                  <Briefcase className="h-5 w-5 mt-1 text-primary" />
+                  <Pen className="h-5 w-5 mt-1 text-primary" />
                   <span>{item.title}</span>
                 </CardTitle>
                 <CardDescription className="flex items-center gap-2 text-base font-medium">
