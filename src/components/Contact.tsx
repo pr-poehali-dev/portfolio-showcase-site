@@ -1,59 +1,138 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from "lucide-react";
+import { GithubIcon, Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
+  const contactInfo = [
+    {
+      id: 1,
+      icon: <Mail className="h-5 w-5 text-primary" />,
+      title: "Email",
+      value: "ivan@example.com",
+      link: "mailto:ivan@example.com"
+    },
+    {
+      id: 2,
+      icon: <Phone className="h-5 w-5 text-primary" />,
+      title: "Телефон",
+      value: "+7 (999) 123-45-67",
+      link: "tel:+79991234567"
+    },
+    {
+      id: 3,
+      icon: <GithubIcon className="h-5 w-5 text-primary" />,
+      title: "GitHub",
+      value: "github.com/ivanov",
+      link: "https://github.com/ivanov"
+    }
+  ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Здесь будет отправка формы
+    console.log("Форма отправлена");
+  };
+
   return (
-    <section id="contact" className="py-16 px-4 bg-secondary/50">
-      <div className="container max-w-4xl">
-        <h2 className="text-3xl font-bold mb-12 text-center">Свяжитесь со мной</h2>
+    <section id="contact" className="py-16 bg-muted/50">
+      <div className="container">
+        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Связаться со мной</h2>
         
-        <div className="grid gap-8 md:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Контактная информация</CardTitle>
-              <CardDescription>Свяжитесь со мной любым удобным способом</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center">
-                <MailIcon className="h-5 w-5 mr-3 text-primary" />
-                <a href="mailto:example@example.com" className="hover:underline">example@example.com</a>
-              </div>
-              <div className="flex items-center">
-                <PhoneIcon className="h-5 w-5 mr-3 text-primary" />
-                <a href="tel:+71234567890" className="hover:underline">+7 (123) 456-78-90</a>
-              </div>
-              <div className="flex items-center">
-                <MapPinIcon className="h-5 w-5 mr-3 text-primary" />
-                <span>Москва, Россия</span>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold mb-6">Контактная информация</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {contactInfo.map((item) => (
+                <Card key={item.id}>
+                  <CardHeader className="p-4">
+                    <CardTitle className="text-base flex items-center gap-2">
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 pt-0">
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-sm hover:underline text-primary"
+                    >
+                      {item.value}
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <span>Местоположение</span>
+                </CardTitle>
+                <CardDescription>
+                  Москва, Россия
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="h-48 bg-muted rounded-md flex items-center justify-center">
+                  <span className="text-muted-foreground">Карта местоположения</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           
-          <Card>
-            <CardHeader>
-              <CardTitle>Отправить сообщение</CardTitle>
-              <CardDescription>Заполните форму, и я свяжусь с вами</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form className="space-y-4">
-                <div>
-                  <Input placeholder="Ваше имя" />
-                </div>
-                <div>
-                  <Input type="email" placeholder="Email" />
-                </div>
-                <div>
-                  <Textarea placeholder="Сообщение" rows={4} />
-                </div>
-                <Button type="submit" className="w-full">
-                  Отправить <SendIcon className="ml-2 h-4 w-4" />
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <div>
+            <h3 className="text-2xl font-bold mb-6">Отправить сообщение</h3>
+            <Card>
+              <CardContent className="p-6">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Имя
+                      </label>
+                      <Input id="name" placeholder="Ваше имя" required />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        Email
+                      </label>
+                      <Input id="email" type="email" placeholder="Ваш email" required />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium">
+                      Тема
+                    </label>
+                    <Input id="subject" placeholder="Тема сообщения" required />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Сообщение
+                    </label>
+                    <Textarea
+                      id="message"
+                      placeholder="Ваше сообщение..."
+                      rows={5}
+                      required
+                    />
+                  </div>
+                  <Button type="submit" className="w-full">
+                    Отправить
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

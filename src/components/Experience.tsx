@@ -1,57 +1,53 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BriefcaseIcon, CalendarIcon } from "lucide-react";
-
-type ExperienceItem = {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-};
-
-const experiences: ExperienceItem[] = [
-  {
-    title: "Старший разработчик",
-    company: "Компания А",
-    period: "2021 - Настоящее время",
-    description: "Разработка и поддержка веб-приложений с использованием React, TypeScript и других современных технологий. Руководство командой разработчиков."
-  },
-  {
-    title: "Веб-разработчик",
-    company: "Компания Б",
-    period: "2018 - 2021",
-    description: "Разработка интерфейсов пользователя, интеграция с API, оптимизация производительности веб-приложений."
-  },
-  {
-    title: "Младший разработчик",
-    company: "Компания В",
-    period: "2016 - 2018",
-    description: "Вёрстка, поддержка существующих проектов, изучение и внедрение новых технологий."
-  }
-];
+import { Briefcase, Calendar } from "lucide-react";
 
 const Experience = () => {
+  const experienceData = [
+    {
+      id: 1,
+      title: "Старший Frontend-разработчик",
+      company: "Технологии Будущего",
+      period: "2020 - настоящее время",
+      description: "Разработка и поддержка крупных SPA на React и TypeScript. Внедрение современных практик разработки, оптимизация производительности."
+    },
+    {
+      id: 2,
+      title: "Frontend-разработчик",
+      company: "Цифровые Решения",
+      period: "2018 - 2020",
+      description: "Создание пользовательских интерфейсов для веб-приложений. Работа с React, Redux и REST API."
+    },
+    {
+      id: 3,
+      title: "Младший разработчик",
+      company: "Web Solutions",
+      period: "2016 - 2018",
+      description: "Верстка интерфейсов, интеграция с бэкендом, поддержка существующих проектов."
+    }
+  ];
+
   return (
-    <section id="experience" className="py-16 px-4 bg-secondary/50">
-      <div className="container max-w-4xl">
-        <h2 className="text-3xl font-bold mb-12 text-center">Опыт работы</h2>
-        <div className="space-y-6">
-          {experiences.map((exp, index) => (
-            <Card key={index}>
+    <section id="experience" className="py-16 bg-muted/50">
+      <div className="container">
+        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Опыт работы</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {experienceData.map((item) => (
+            <Card key={item.id} className="h-full">
               <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle>{exp.title}</CardTitle>
-                  <div className="flex items-center text-muted-foreground">
-                    <CalendarIcon className="h-4 w-4 mr-1" />
-                    <span className="text-sm">{exp.period}</span>
-                  </div>
-                </div>
-                <CardDescription className="flex items-center">
-                  <BriefcaseIcon className="h-4 w-4 mr-1" />
-                  {exp.company}
+                <CardTitle className="flex items-start gap-2">
+                  <Briefcase className="h-5 w-5 mt-1 text-primary" />
+                  <span>{item.title}</span>
+                </CardTitle>
+                <CardDescription className="flex items-center gap-2 text-base font-medium">
+                  {item.company}
+                </CardDescription>
+                <CardDescription className="flex items-center gap-1">
+                  <Calendar className="h-4 w-4" />
+                  <span>{item.period}</span>
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>{exp.description}</p>
+                <p>{item.description}</p>
               </CardContent>
             </Card>
           ))}

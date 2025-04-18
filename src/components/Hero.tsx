@@ -1,37 +1,41 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDownIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <section id="about" className="py-20 px-4 md:py-32 flex flex-col items-center justify-center min-h-[80vh]">
-      <div className="container max-w-4xl text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Привет, я <span className="text-primary">Ваше Имя</span></h1>
-        <div className="relative w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full border-4 border-primary">
-          <img 
-            src="/placeholder.svg" 
-            alt="Фото профиля" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
-          Специалист по веб-разработке с фокусом на создание современных пользовательских интерфейсов
-        </p>
-        <div className="flex gap-4 justify-center">
-          <Button size="lg" onClick={scrollToContact}>
-            Связаться со мной
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <a href="#experience">
-              Узнать больше <ArrowDownIcon className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+    <section id="about" className="py-16 md:py-24">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              Иван Иванов
+            </h1>
+            <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
+              Frontend-разработчик
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Специализируюсь на создании современных веб-приложений с использованием 
+              React, TypeScript и современных инструментов разработки. Более 5 лет опыта 
+              в разработке пользовательских интерфейсов.
+            </p>
+            <div className="flex gap-4">
+              <Button asChild>
+                <Link to="/#contact">Связаться</Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link to="/#experience">Посмотреть опыт</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20">
+              <img
+                src="/placeholder.svg"
+                alt="Фотография разработчика"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
