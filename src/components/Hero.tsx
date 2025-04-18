@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Quote } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -13,10 +14,19 @@ const Hero = () => {
             <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
               Копирайтер
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-4">
               Создаю привлекательные и убедительные тексты, которые превращают читателей в клиентов. 
-              Специализируюсь на SEO-копирайтинге, рекламных текстах и контент-маркетинге.
+              Моя любовь к литературе и широкая эрудиция позволяют находить нестандартные решения и создавать тексты, которые запоминаются.
             </p>
+            <div className="mb-6 p-4 border-l-4 border-primary bg-primary/5 dark:bg-primary/10 rounded">
+              <div className="flex gap-2 items-start mb-2">
+                <Quote className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                <p className="italic text-muted-foreground">
+                  «Знание составляется из мелких крупинок ежедневного опыта.»
+                </p>
+              </div>
+              <p className="text-sm text-right text-muted-foreground">— Д.И. Писарев</p>
+            </div>
             <div className="flex gap-4">
               <Button asChild>
                 <Link to="/#contact">Связаться</Link>
@@ -29,7 +39,7 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=500&h=500"
+                src="https://cdn.poehali.dev/files/2cf969d4-be4b-44f8-957a-03f4e9e4d940.png"
                 alt="Фотография Ясмины Куловой"
                 className="w-full h-full object-cover"
               />
