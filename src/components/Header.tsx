@@ -14,7 +14,7 @@ const Header = () => {
             <Link to="/#about">Обо мне</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link to="/#experience">Опыт</Link>
+            <Link to="/#samples">Примеры работ</Link>
           </Button>
           <Button variant="ghost" asChild>
             <Link to="/#skills">Навыки</Link>

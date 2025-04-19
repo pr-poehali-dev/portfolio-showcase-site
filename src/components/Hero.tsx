@@ -16,23 +16,23 @@ const Hero = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-4">
               Создаю привлекательные и убедительные тексты, которые превращают читателей в клиентов. 
-              Моя любовь к литературе и широкая эрудиция позволяют находить нестандартные решения и создавать тексты, которые запоминаются.
+              Моя любовь к литературе, искусству слова и широкая эрудиция позволяют находить нестандартные решения и создавать тексты, которые запоминаются.
             </p>
             <div className="mb-6 p-4 border-l-4 border-primary bg-primary/5 dark:bg-primary/10 rounded">
               <div className="flex gap-2 items-start mb-2">
                 <Quote className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <p className="italic text-muted-foreground">
-                  «Знание составляется из мелких крупинок ежедневного опыта.»
+                  «Слово — драгоценный дар, дающий возможность сделать счастливыми других и самого себя.»
                 </p>
               </div>
-              <p className="text-sm text-right text-muted-foreground">— Д.И. Писарев</p>
+              <p className="text-sm text-right text-muted-foreground">— А.П. Чехов</p>
             </div>
             <div className="flex gap-4">
               <Button asChild>
                 <Link to="/#contact">Связаться</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link to="/#experience">Посмотреть опыт</Link>
+                <Link to="/#samples">Примеры работ</Link>
               </Button>
             </div>
           </div>
