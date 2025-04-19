@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { MailIcon } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,12 +6,12 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground font-lora">
               © 2025 Ясмина Кулова. Все права защищены.
             </p>
           </div>
           
-          <nav className="flex gap-4">
+          <nav className="flex gap-4 font-lora">
             <Link to="/#about" className="text-muted-foreground hover:text-foreground transition-colors">
               Обо мне
             </Link>

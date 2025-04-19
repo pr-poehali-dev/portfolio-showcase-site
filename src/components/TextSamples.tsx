@@ -115,12 +115,12 @@ const TextSamples = () => {
   return (
     <section id="samples" className="py-16 bg-muted/50">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Примеры текстов</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center font-playfair">Примеры текстов</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {samples.map((sample) => (
             <Card key={sample.id} className="h-full flex flex-col">
               <CardHeader>
-                <CardTitle className="flex items-start gap-2">
+                <CardTitle className="flex items-start gap-2 font-playfair">
                   {sample.icon}
                   <span>{sample.title}</span>
                 </CardTitle>
@@ -142,7 +142,7 @@ const TextSamples = () => {
       <Dialog open={dialogContent.isOpen} onOpenChange={closeDialog}>
         <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>{dialogContent.title}</DialogTitle>
+            <DialogTitle className="font-playfair">{dialogContent.title}</DialogTitle>
             <DialogDescription>
               Пример {dialogContent.type}
             </DialogDescription>

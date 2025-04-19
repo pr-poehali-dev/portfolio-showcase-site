@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Связаться со мной</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center font-playfair">Связаться со мной</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {contactInfo.map((item) => (
             <Card key={item.id} className="text-center hover:shadow-lg transition-shadow">
@@ -37,7 +37,7 @@ const Contact = () => {
                 <div className="mx-auto bg-primary/10 rounded-full p-4 mb-4">
                   {item.icon}
                 </div>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
+                <CardTitle className="text-xl font-playfair">{item.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <a 

@@ -6,11 +6,11 @@ const Skills = () => {
   return (
     <section id="skills" className="py-16">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Навыки и квалификация</h2>
+        <h2 className="text-3xl font-bold tracking-tight mb-12 text-center font-playfair">Навыки и квалификация</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="h-full">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 font-playfair">
                 <BookOpen className="h-5 w-5 text-primary" />
                 <span>Копирайтинг</span>
               </CardTitle>
@@ -33,7 +33,7 @@ const Skills = () => {
 
           <Card className="h-full">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 font-playfair">
                 <Globe className="h-5 w-5 text-primary" />
                 <span>Языки</span>
               </CardTitle>
@@ -70,7 +70,7 @@ const Skills = () => {
 
           <Card className="h-full">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 font-playfair">
                 <GraduationCap className="h-5 w-5 text-primary" />
                 <span>Сертификаты</span>
               </CardTitle>

@@ -17,6 +17,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        playfair: ["Playfair Display", ...fontFamily.serif],
+        lora: ["Lora", ...fontFamily.serif],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,9 +61,6 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily: {
-        sans: ["Inter var", ...fontFamily.sans],
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -76,7 +77,7 @@ const config = {
       },
       backgroundImage: {
         'hero-pattern': "url('https://images.unsplash.com/photo-1596382941523-4cbae6e9dfbf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080')",
-        'hero-pattern-dark': "url('https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080')",
+        'hero-pattern-dark': "url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080')",
       },
     },
   },

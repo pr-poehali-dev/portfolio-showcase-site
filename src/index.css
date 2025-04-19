@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -71,7 +73,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-lora;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
   }
   
   html {
@@ -81,8 +87,46 @@
 
 .bg-hero-pattern {
   background-image: url('https://images.unsplash.com/photo-1596382941523-4cbae6e9dfbf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080');
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: lighten;
+  position: relative;
+}
+
+.bg-hero-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='rgba(0, 0, 0, 0.07)' stroke-width='1'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5z'%3E%3C/path%3E%3Cpath d='M6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.1;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .dark .bg-hero-pattern-dark {
   background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1920&h=1080');
+  background-color: rgba(20, 12, 8, 0.85);
+  background-blend-mode: darken;
+}
+
+/* Карусель */
+.quote-carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.quote-slide.active {
+  opacity: 1;
+  position: relative;
 }

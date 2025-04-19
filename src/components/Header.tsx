@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link to="/" className="flex items-center gap-2 font-bold text-xl">
-          Портфолио
+        <Link to="/" className="flex items-center gap-2 font-playfair font-semibold text-xl">
+          Резюме
         </Link>
         <nav className="ml-auto flex gap-4 items-center">
           <Button variant="ghost" asChild>
